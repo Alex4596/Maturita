@@ -1,0 +1,11 @@
+### Zoznam Predmetov:
+- [[CyberSecurity]]
+- [[Linux]]
+- [[Network]]
+- [[Hardware]]
+- [[Web]]
+- [[DDW]]
+- [[Programko]]
+- [[Mikrocipy]]
+- [[Elektro]]
+- [[Ekonomika]]

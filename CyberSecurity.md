@@ -1,0 +1,80 @@
+
+##### Je veda, ktora sa zaobera zabespecenim pocitacov a technologii
+
+### Zabespecenie pristupu k datam:
+- ###### Dovernost = ""
+- ###### Integrita = "Celost, data neboli manipulovane"
+- ###### Dostupnost dat = ""
+- ##### Zalohovanie:
+	- **Pravidlo: 3-2-1**: (3 Kopie dat) (2 Rozne media) (1 Kopia na inej lokalite)
+- ##### UPS:
+	- ###### Nepretrzite napajanie
+	- **Off-line**: Najlacnejsie, najednoduchsie, napajanie priamo do zariadenia cez batteriu.
+	- **Line-interactive**:  *Buck boost* Transformator (Vyrovnava napatie zo siete do zariadenia).
+	- **On-line**: Smart upozornuje kedy sa vybije bateria bateria je zvlast napojena a aj zo siete je zvlast napojene.
+- ##### RAID:
+	- ###### Sposob virtualneho rozdelenia diskov, za ucelom ochrany dat pred pokazenim disku
+	- **RAID 0 (Striping)**: Rozdelenie dat medzi viac disky
+		- 1. DISK: (A1, A3, A5, A7)
+		- 2. DISK: (A2, A4, A6, A8)
+	- **RAID 1 (Mirroring)**: Kopirovanie dat na viac Diskov
+		- 1. DISK: (A1, A2, A3, A4)
+		- 2. DISK: (A1, A2, A3, A4)
+	- **RAID 5 (Striping with Distributed Parity)**: Ako RAID 0 +  Navratova rezerva
+		- 1. DISK: (A1, B1 C1, Dp)
+		- 2. DISK: (A2, B2, Cp, D1)
+		- 3. DISK: (A3, Bp, C2, D2)
+		- 4. DISK: (Ap, B3, C3, D3)
+	- **RAID 6**: RAID 5 len z 2 rezervami 
+		- 1. DISK: (A1, B1, C1, Dp, Eq)
+		- 2. DISK: (A2, B2, Cp, Dq, E1)
+		- 3. DISK: (A3, Bp, Cq, D1, E2)
+		- 4. DISK: (Ap, Bq, C2, D2, E3)
+		- 5. DISK: (Aq, B3, C3, D3, Ep)
+	- **RAID 10 (Stripping and Mirroring)**: RAID 1 + RAID 0
+		- 1. DISK: (A1, A3, A5, A7)
+		- 2. DISK: (A1, A3, A5, A7)
+
+		- 3. DISK: (A2, A4, A6, A8)
+		- 4. DISK: (A2, A4, A6, A8)
+- ##### AUTH:
+	- ###### Identifikacia:
+		- **Definícia:** Proces, pri ktorom používateľ tvrdí: „Toto som ja“.
+	- ###### Autentifikacia: 
+		- **Definícia:** Proces, pri ktorom používateľ tvrdí: „Toto som skutocne ja“.
+		- **Priklady**: (*Heslo*m, *Pin*, *Bezpecnostne otazky*)
+	- ###### Autorizacia:
+		- **Definícia:** Tvrdi naco ma Pouzivatel pravo.
+		- **CRUD** Operacie: (Mazanie, Vytvaranie, Upravovanie, Citanie)
+	- ###### Logovanie: 
+		- **Zapisovanie**: *Eventov*, *Zmien*.
+- ##### Sifrovanie:
+	- ###### Substitucne: *Zmena znakov na ine znaky alebo cisla*
+	- ###### Transpozicne: *Premiesanie znakov (Posun)*
+	- ###### Asymetricke: 2 klude (Siforvanie, Rozsifrovanie)
+	- ###### Digitalne Elektronicke odtlacky:
+		- Biometricky Odtlacok prsta Jedinecny.
+	- ##### Kodovanie: 
+		- Premenna textu na iny tvar (Ucel neni znemoznit Precitanie)
+	- ##### Encryption:
+		- Premenna Textu aby sa nedal precitat len ten, kto ma kluc (Ucel je zabranit Precitanie)
+	- ###### HASH:
+		- Premenna Textu na fixny pocet znakov (ONE-WAY)
+		- text -> hash (true)
+		- hash -> text (false)
+		- (Ucelom je znemoznit navratitelnost textu do povodnej formi, sluzi len na Porovnavanie)
+		- Hesla, Overovanie;
+	- ###### Elektronicky podpis:
+		- nemozne sfalsovat, matematicke vypocty a zapametanie si podpisu a styl podpisu.
+- ##### Bezpecnost v sietach:
+	- ###### VPN:
+	- ###### Firewall;
+	- ###### Proxy:
+	- ###### IDS:
+	- ###### IPS:
+	- ###### DoS:
+	- ###### MITM:
+	- ###### Socialne Inzinierstvo:
+- ##### Softverova bezpecnost:
+	- ###### Malver:
+	- ###### Riadenie Pristupu do OS:
